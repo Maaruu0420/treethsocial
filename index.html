@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>淬齒淨白 - 六月社群規劃</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&amp;family=Noto+Serif+TC:wght@300;400;500;600;700&amp;family=Noto+Sans+TC:wght@300;400;500&amp;family=Cinzel:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg-cream: #F5F0E8;
+    --bg-warm: #EBE3D6;
+    --bg-light: #FAF6EE;
+    --gold: #C9A961;
+    --gold-light: #DCC082;
+    --gold-deep: #A88A4A;
+    --brown-deep: #4A3F35;
+    --brown-mid: #6B5D4F;
+    --brown-soft: #8B7A6A;
+    --text-light: #A89B8C;
+    --line: #D4C8B5;
+    --accent-blue: #B8C4CC;
+    --accent-green: #B5C2A8;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    font-family: 'Noto Serif TC', serif;
+    background: #2a2520;
+    color: var(--brown-deep);
+    padding: 40px 0;
+    min-height: 100vh;
+  }
+
+  /* 簡報容器 - 給每張 slide 一個 wrapper */
+  .slide-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+
+  /* 用 aspect-ratio 維持 16:9 比例,寬度跟著螢幕走 */
+  .slide-wrapper::before {
+    content: '';
+    display: block;
+    padding-top: 56.25%; /* 720/1280 = 0.5625 */
+  }
+
+  .slide {
+    width: 1280px;
+    height: 720px;
+    background: var(--bg-cream);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    page-break-after: always;
+    transform-origin: top left;
+  }
+
+  /* === Slide 1 封面 === */
+  .slide-cover {
+    background: linear-gradient(135deg, #EBE3D6 0%, #F5F0E8 50%, #E8DFD0 100%);
+  }
+  .slide-cover::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: 
+      radial-gradient(ellipse at 30% 40%, rgba(255,255,255,0.5) 0%, transparent 50%),
+      linear-gradient(180deg, rgba(220,192,130,0.08) 0%, rgba(184,196,204,0.12) 100%);
+  }
+  /* 封面圖片框 - 可置入圖片 */
+  .cover-image-frame {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    width: 480px;
+    height: 600px;
+    border-radius: 240px 240px 12px 12px;
+    overflow: hidden;
+    border: 1px solid rgba(201,169,97,0.25);
+    background: 
+      linear-gradient(180deg, rgba(245,240,232,0.4) 0%, rgba(220,192,130,0.15) 100%),
+      radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.6) 0%, transparent 60%);
+    z-index: 2;
+  }
+  .cover-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cover-flowing-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.15;
+    z-index: 1;
+  }
+  .cover-content {
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .cover-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 80px;
+  }
+  .cover-logo-svg {
+    width: 56px;
+    height: 56px;
+  }
+  .cover-brand {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--brown-deep);
+    letter-spacing: 4px;
+  }
+  .cover-brand-en {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 8px;
+    color: var(--gold-deep);
+    margin-top: 4px;
+  }
+  .cover-title-block {
+    border-left: 1px solid var(--gold);
+    padding-left: 32px;
+  }
+  .cover-month {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--brown-deep);
+    letter-spacing: 8px;
+    line-height: 1.1;
+  }
+  .cover-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    letter-spacing: 6px;
+    color: var(--gold-deep);
+    margin-top: 16px;
+  }
+  .cover-year {
+    position: absolute;
+    bottom: 50px;
+    left: 120px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--brown-soft);
+    z-index: 10;
+  }
+  .cover-year::before {
+    content: '— ';
+    color: var(--gold);
+  }
+
+  /* === 通用內頁版型 === */
+  .slide-inner {
+    background: var(--bg-cream);
+    display: flex;
+    align-items: stretch;
+  }
+  .slide-left {
+    width: 22%;
+    padding: 60px 30px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .slide-number {
+    font-family: 'Cinzel', serif;
+    font-size: 88px;
+    color: rgba(168, 138, 74, 0.25);
+    font-weight: 400;
+    line-height: 1;
+  }
+  .slide-right {
+    flex: 1;
+    position: relative;
+    padding: 60px 70px 60px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-corner-mark {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 36px;
+    height: 36px;
+    opacity: 0.7;
+  }
+  .left-title-zh {
+    font-size: 25px;
+    color: var(--brown-deep);
+    letter-spacing: 6px;
+    margin-bottom: 8px;
+  }
+  .left-title-line {
+    width: 32px;
+    border-top: 1px solid var(--gold);
+    margin: 10px 0;
+  }
+  .left-subtitle {
+    font-size: 17px;
+    color: var(--text-light);
+    letter-spacing: 3px;
+    font-family: 'Cinzel', serif;
+  }
+
+  /* === Slide 2 時間規劃 === */
+  .time-content {
+    padding-top: 100px;
+    width: 60%;
+  }
+  .time-row {
+    margin-bottom: 70px;
+    border-left: 2px solid var(--gold);
+    padding-left: 32px;
+  }
+  .time-label {
+    font-size: 22px;
+    color: var(--gold-deep);
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+  }
+  .time-value {
+    font-size: 19px;
+    color: var(--brown-deep);
+    letter-spacing: 2px;
+    line-height: 1.7;
+  }
+  /* 時間規劃右側圖片框 */
+  .time-image-frame {
+    position: absolute;
+    right: 100px;
+    top: 60px;
+    transform: none;
+    width: 400px;
+    height: 600px;
+    border-radius: 200px 200px 8px 8px;
+    overflow: hidden;
+    border: 1px solid rgba(201,169,97,0.2);
+    background: linear-gradient(180deg, #E8DFD0 0%, #DCC082 100%);
+  }
+  .time-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .time-image-frame-empty {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
+
+  /* === Slide 3 主題規劃 === */
+  .theme-list {
+    padding-top: 80px;
+  }
+  .theme-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 28px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(168, 138, 74, 0.2);
+  }
+  .theme-item:last-child { border-bottom: none; }
+  .theme-num {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: var(--gold-deep);
+    letter-spacing: 2px;
+    min-width: 30px;
+  }
+  .theme-name {
+    font-size: 22px;
+    color: var(--brown-deep);
+    letter-spacing: 4px;
+    font-weight: 400;
+  }
+  .theme-dot {
+    margin-left: auto;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  /* === 主題內容頁(合併版) === */
+  .topic-page {
+    padding: 60px 70px 60px 30px;
+    position: relative;
+    width: 100%;
+  }
+  .topic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gold);
+  }
+  .topic-category-label {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+  .topic-category-name {
+    font-size: 32px;
+    color: var(--brown-deep);
+    letter-spacing: 6px;
+    font-weight: 500;
+  }
+  .topic-count {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: var(--gold-deep);
+    letter-spacing: 3px;
+    padding-bottom: 6px;
+  }
+  /* 並列內容區塊 */
+  .topic-items {
+    display: grid;
+    gap: 28px;
+    padding-top: 20px;
+  }
+  .topic-items.cols-1 { grid-template-columns: 1fr; }
+  .topic-items.cols-2 { grid-template-columns: 1fr 1fr; }
+  .topic-card {
+    background: rgba(255, 252, 245, 0.5);
+    border-left: 2px solid var(--gold);
+    padding: 24px 26px;
+    position: relative;
+  }
+  .topic-card-num {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    color: var(--text-light);
+    letter-spacing: 3px;
+  }
+  .topic-card-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold-deep);
+    margin-bottom: 10px;
+  }
+  .topic-card-title {
+    font-size: 25px;
+    color: var(--brown-deep);
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .topic-card-desc {
+    font-size: 18.5px;
+    line-height: 1.9;
+    color: var(--brown-mid);
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+  .topic-divider-deco {
+    position: absolute;
+    bottom: 50px;
+    right: 70px;
+    width: 140px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent 0%, var(--gold) 100%);
+  }
+
+  /* === 排程行事曆頁 === */
+  .calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+  }
+  .calendar-table th {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--brown-soft);
+    padding: 14px 8px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+    font-weight: 400;
+  }
+  .calendar-table td {
+    height: 88px;
+    vertical-align: top;
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(212, 200, 181, 0.4);
+    position: relative;
+    width: 14.28%;
+  }
+  .cal-date {
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    color: var(--brown-deep);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .cal-date-dim {
+    color: var(--text-light);
+    opacity: 0.5;
+  }
+  .cal-event {
+    font-size: 13px;
+    color: var(--gold-deep);
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    background: rgba(220, 192, 130, 0.15);
+    border-left: 2px solid var(--gold);
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  .cal-event.holiday {
+    color: #B85C5C;
+    background: rgba(184, 92, 92, 0.08);
+    border-left-color: #B85C5C;
+  }
+
+  /* === 品牌核心頁 === */
+  .core-list {
+    padding-top: 50px;
+  }
+  .core-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 26px;
+    align-items: flex-start;
+  }
+  .core-num {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--gold);
+    min-width: 40px;
+    line-height: 1.5;
+    padding-top: 4px;
+  }
+  .core-text-block {
+    flex: 1;
+    border-left: 1px solid rgba(201,169,97,0.3);
+    padding-left: 22px;
+  }
+  .core-title {
+    font-size: 19px;
+    color: var(--brown-deep);
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .core-desc {
+    font-size: 14px;
+    color: var(--brown-mid);
+    letter-spacing: 1px;
+    line-height: 1.7;
+  }
+
+  /* === 結尾頁 === */
+  .ending-page {
+    background: linear-gradient(135deg, #F5F0E8 0%, #EBE3D6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .ending-content {
+    max-width: 600px;
+  }
+  .ending-logo {
+    margin-bottom: 50px;
+  }
+  .ending-quote {
+    font-size: 26px;
+    color: var(--brown-deep);
+    letter-spacing: 6px;
+    line-height: 2;
+    font-weight: 300;
+  }
+  .ending-line {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin: 40px auto;
+  }
+  .ending-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--gold-deep);
+    letter-spacing: 3px;
+  }
+  .ending-thanks {
+    margin-top: 60px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 8px;
+    color: var(--brown-soft);
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .slide { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<!-- SVG Symbol -->
+<svg style="display:none">
+<defs>
+<symbol id="logo-sunburst" viewbox="0 0 100 100">
+<g fill="none" stroke="#C9A961" stroke-linecap="round" stroke-width="1.2">
+<line x1="50" x2="50" y1="50" y2="10"></line>
+<line x1="50" x2="50" y1="50" y2="90"></line>
+<line x1="50" x2="10" y1="50" y2="50"></line>
+<line x1="50" x2="90" y1="50" y2="50"></line>
+<line x1="50" x2="78.28" y1="50" y2="21.72"></line>
+<line x1="50" x2="21.72" y1="50" y2="78.28"></line>
+<line x1="50" x2="78.28" y1="50" y2="78.28"></line>
+<line x1="50" x2="21.72" y1="50" y2="21.72"></line>
+</g>
+<g fill="#C9A961">
+<polygon points="50,12 48,30 52,30"></polygon>
+<polygon points="50,88 48,70 52,70"></polygon>
+<polygon points="12,50 30,48 30,52"></polygon>
+<polygon points="88,50 70,48 70,52"></polygon>
+<polygon points="76.87,23.13 65,32 68,35"></polygon>
+<polygon points="23.13,76.87 35,68 32,65"></polygon>
+<polygon points="76.87,76.87 65,68 68,65"></polygon>
+<polygon points="23.13,23.13 35,32 32,35"></polygon>
+</g>
+<g fill="none" stroke="#DCC082" stroke-linecap="round" stroke-width="0.8">
+<line x1="50" x2="65" y1="50" y2="14"></line>
+<line x1="50" x2="35" y1="50" y2="14"></line>
+<line x1="50" x2="86" y1="50" y2="35"></line>
+<line x1="50" x2="86" y1="50" y2="65"></line>
+<line x1="50" x2="65" y1="50" y2="86"></line>
+<line x1="50" x2="35" y1="50" y2="86"></line>
+<line x1="50" x2="14" y1="50" y2="65"></line>
+<line x1="50" x2="14" y1="50" y2="35"></line>
+</g>
+<circle cx="50" cy="50" fill="#F5F0E8" r="3" stroke="#C9A961" stroke-width="0.5"></circle>
+</symbol>
+</defs>
+</svg>
+<!-- ============ Slide 1: 封面 ============ -->
+<div class="slide-wrapper"><div class="slide slide-cover">
+<svg class="cover-flowing-line" preserveaspectratio="none" viewbox="0 0 1280 720">
+<path d="M0,500 Q400,400 800,450 T1280,380" fill="none" stroke="#C9A961" stroke-width="1"></path>
+<path d="M0,560 Q500,460 900,520 T1280,460" fill="none" stroke="#DCC082" stroke-width="0.8"></path>
+</svg>
+<!-- 封面圖片框：請將下方 img 的 src 替換為你的圖片連結 -->
+<div class="cover-image-frame">
+<img alt="封面圖片" onerror="this.style.display='none'" src="01.jpeg"/>
+</div>
+<div class="cover-content">
+<div class="cover-logo-area">
+<svg class="cover-logo-svg"><use href="#logo-sunburst"></use></svg>
+<div>
+<div class="cover-brand">淬齒淨白</div>
+<div class="cover-brand-en">TREETH</div>
+</div>
+</div>
+<div class="cover-title-block">
+<div class="cover-month">六月 社群規劃</div>
+<div class="cover-subtitle">JUNE SOCIAL MARKETING</div>
+</div>
+</div>
+<div class="cover-year">2026 / 06</div>
+</div></div>
+<!-- ============ Slide 2: 時間規劃 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">01</div>
+<div>
+<div class="left-title-zh">時間規劃</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">SCHEDULE</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="time-content">
+<div class="time-row">
+<div class="time-label">發文頻率</div>
+<div class="time-value">每週 2 則貼文｜本月共 9 則</div>
+</div>
+<div class="time-row">
+<div class="time-label">發文時間</div>
+<div class="time-value">
+          平日｜12:00 - 13:00 ／ 18:00 - 19:00<br/>
+          假日｜19:30 - 20:30
+        </div>
+</div>
+</div>
+<!-- 時間規劃右側圖片框：請將下方 img 的 src 替換為你的圖片連結 -->
+<div class="time-image-frame">
+<img alt="時間規劃配圖" onerror="this.style.display='none'" src="02.jpg"/>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 3: 主題規劃 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">02</div>
+<div>
+<div class="left-title-zh">主題規劃</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">CONTENT PILLARS</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="theme-list">
+<div class="theme-item">
+<div class="theme-num">01</div>
+<div class="theme-name">生活調味劑</div>
+<div class="theme-dot"></div>
+</div>
+<div class="theme-item">
+<div class="theme-num">02</div>
+<div class="theme-name">日常美學提案</div>
+<div class="theme-dot"></div>
+</div>
+<div class="theme-item">
+<div class="theme-num">03</div>
+<div class="theme-name">好評分享</div>
+<div class="theme-dot"></div>
+</div>
+<div class="theme-item">
+<div class="theme-num">04</div>
+<div class="theme-name">時事共感誌</div>
+<div class="theme-dot"></div>
+</div>
+<div class="theme-item">
+<div class="theme-num">05</div>
+<div class="theme-name">質感生活</div>
+<div class="theme-dot"></div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 4: 主題內容 - 時事共感誌 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">03</div>
+<div>
+<div class="left-title-zh">主題內容</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">TIMELY EMPATHY</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="topic-page">
+<div class="topic-header">
+<div>
+<div class="topic-category-label">CATEGORY 01</div>
+<div class="topic-category-name">時事共感誌</div>
+</div>
+<div class="topic-count">2 POSTS</div>
+</div>
+<div class="topic-items cols-2">
+<div class="topic-card">
+<div class="topic-card-num">No. 01</div>
+<div class="topic-card-tag">THEME</div>
+<div class="topic-card-title">梅雨季的悶感解方</div>
+<div class="topic-card-desc">
+            以連續陰雨天的「濕黏感」切入共感，連結牙齒淨透感是可以自己決定的小確幸。傳遞品牌獨立拉簾、毯子、耳機的療癒服務氛圍，把半小時的美齒時光定位為梅雨季的清爽出口。
+          </div>
+</div>
+<div class="topic-card">
+<div class="topic-card-num">No. 02</div>
+<div class="topic-card-tag">THEME ／ 端午節</div>
+<div class="topic-card-title">端午聚會的從容感</div>
+<div class="topic-card-desc">
+            描繪端午家族聚會的真實場景（粽子、長輩問候、合照），帶出「不用先想著遮、抿」的放鬆笑容，將品牌價值連結到節日中的情感共鳴與自信表達。
+          </div>
+</div>
+</div>
+<div class="topic-divider-deco"></div>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 5: 主題內容 - 好評分享 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">03</div>
+<div>
+<div class="left-title-zh">主題內容</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">REVIEWS</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="topic-page">
+<div class="topic-header">
+<div>
+<div class="topic-category-label">CATEGORY 02</div>
+<div class="topic-category-name">好評分享</div>
+</div>
+<div class="topic-count">2 POSTS</div>
+</div>
+<div class="topic-items cols-2">
+<div class="topic-card">
+<div class="topic-card-num">No. 01</div>
+<div class="topic-card-tag">THEME</div>
+<div class="topic-card-title">客戶真實回饋</div>
+<div class="topic-card-desc">
+            搭配品牌端提供的真實 Google 評價或客戶截圖，呈現第三方口碑。文案以「客人悄悄話」為引導，強化淬齒在醫美客群與一般客群中的好口碑記憶點。
+          </div>
+</div>
+<div class="topic-card">
+<div class="topic-card-num">No. 02</div>
+<div class="topic-card-tag">THEME</div>
+<div class="topic-card-title">客戶真實回饋</div>
+<div class="topic-card-desc">
+            搭配品牌端提供的真實客戶評價，主題聚焦在獨立拉簾、一次性耗材的安心體驗。透過真實回饋強化淬齒「隱私守護 ＋ 極致衛生」的差異化優勢。
+          </div>
+</div>
+</div>
+<div class="topic-divider-deco"></div>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 6: 主題內容 - 生活調味劑 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">03</div>
+<div>
+<div class="left-title-zh">主題內容</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">DAILY SPICE</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="topic-page">
+<div class="topic-header">
+<div>
+<div class="topic-category-label">CATEGORY 03</div>
+<div class="topic-category-name">生活調味劑</div>
+</div>
+<div class="topic-count">2 POSTS</div>
+</div>
+<div class="topic-items cols-2">
+<div class="topic-card">
+<div class="topic-card-num">No. 01</div>
+<div class="topic-card-tag">THEME</div>
+<div class="topic-card-title">夏日小心機測驗</div>
+<div class="topic-card-desc">
+            以「最常點的夏日飲料」為趣味測驗，A 冰美式／B 鐵觀音拿鐵／C 莓果氣泡飲／D 蜂蜜檸檬，引導粉絲留言互動。下篇預告「夏日笑容氣場」對照，同時溫和提醒深色飲品對牙齒的影響，埋入專業引導。
+          </div>
+</div>
+<div class="topic-card">
+<div class="topic-card-num">No. 02</div>
+<div class="topic-card-tag">THEME ／ 夏至</div>
+<div class="topic-card-title">夏至日光下的笑容力學</div>
+<div class="topic-card-desc">
+            夏至過後陽光更強，在強光下膚色與牙齒色階都會更明顯。提出「不追求假白，而是與膚色、陽光剛剛好平衡」的自然系審美觀，強化品牌「不傷牙、自然亮澤」的定位。
+          </div>
+</div>
+</div>
+<div class="topic-divider-deco"></div>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 7: 主題內容 - 質感生活 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">03</div>
+<div>
+<div class="left-title-zh">主題內容</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">REFINED LIFE</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="topic-page">
+<div class="topic-header">
+<div>
+<div class="topic-category-label">CATEGORY 04</div>
+<div class="topic-category-name">質感生活</div>
+</div>
+<div class="topic-count">2 POSTS</div>
+</div>
+<div class="topic-items cols-2">
+<div class="topic-card">
+<div class="topic-card-num">No. 01</div>
+<div class="topic-card-tag">THEME</div>
+<div class="topic-card-title">牙齒保養雙軌制</div>
+<div class="topic-card-desc">
+            建立「半年洗牙 ＋ 季節美齒保養」的雙軌觀念，呼應品牌「可推薦客人配合洗牙診所」的服務優勢。傳遞淬齒能協助客人一起安排洗牙與美齒預約時間的貼心服務，深化專業可信賴的形象。
+          </div>
+</div>
+<div class="topic-card">
+<div class="topic-card-num">No. 02</div>
+<div class="topic-card-tag">THEME ／ 上半年收尾</div>
+<div class="topic-card-title">上半年告別儀式</div>
+<div class="topic-card-desc">
+            2026 上半年收尾，以「給自己一個小小儀式感」為主軸，將美齒保養與整理生活、清理空間並列，作為迎接下半年的淨化儀式。傳遞品牌療癒、質感的生活風格定位。
+          </div>
+</div>
+</div>
+<div class="topic-divider-deco"></div>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 8: 主題內容 - 日常美學提案 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">03</div>
+<div>
+<div class="left-title-zh">主題內容</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">DAILY AESTHETIC</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="topic-page">
+<div class="topic-header">
+<div>
+<div class="topic-category-label">CATEGORY 05</div>
+<div class="topic-category-name">日常美學提案</div>
+</div>
+<div class="topic-count">1 POST</div>
+</div>
+<div class="topic-items cols-1">
+<div class="topic-card">
+<div class="topic-card-num">No. 01</div>
+<div class="topic-card-tag">THEME ／ 端午連假</div>
+<div class="topic-card-title">端午連假前的儀式感</div>
+<div class="topic-card-desc" style="font-size: 18.5px; line-height: 2;">
+            切入連假前的「自我整理」氛圍，將美齒保養與剪髮、修甲並列為連假前的日常儀式。淡化節日符號，改以準備合照、拍照的從容感為記憶點，鋪陳連假預約動機。
+          </div>
+</div>
+</div>
+<div class="topic-divider-deco"></div>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 9: 排程行事曆 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">04</div>
+<div>
+<div class="left-title-zh">排程規劃</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">CALENDAR</div>
+</div>
+</div>
+<div class="slide-right" style="padding: 60px 60px 60px 0;">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<table class="calendar-table">
+<thead>
+<tr>
+<th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div class="cal-date cal-date-dim">31</div></td>
+<td><div class="cal-date">1</div></td>
+<td><div class="cal-date">2</div><div class="cal-event">時事共感誌</div></td>
+<td><div class="cal-date">3</div></td>
+<td><div class="cal-date">4</div></td>
+<td><div class="cal-date">5</div><div class="cal-event">好評分享</div></td>
+<td><div class="cal-date">6</div></td>
+</tr>
+<tr>
+<td><div class="cal-date">7</div></td>
+<td><div class="cal-date">8</div></td>
+<td><div class="cal-date">9</div><div class="cal-event">生活調味劑</div></td>
+<td><div class="cal-date">10</div></td>
+<td><div class="cal-date">11</div></td>
+<td><div class="cal-date">12</div><div class="cal-event">質感生活</div></td>
+<td><div class="cal-date">13</div></td>
+</tr>
+<tr>
+<td><div class="cal-date">14</div></td>
+<td><div class="cal-date">15</div></td>
+<td><div class="cal-date">16</div><div class="cal-event">日常美學提案</div></td>
+<td><div class="cal-date">17</div></td>
+<td><div class="cal-date">18</div></td>
+<td><div class="cal-date">19</div></td>
+<td><div class="cal-date">20</div><div class="cal-event holiday">端午・時事共感誌</div></td>
+</tr>
+<tr>
+<td><div class="cal-date">21</div></td>
+<td><div class="cal-date">22</div></td>
+<td><div class="cal-date">23</div><div class="cal-event">生活調味劑</div></td>
+<td><div class="cal-date">24</div></td>
+<td><div class="cal-date">25</div></td>
+<td><div class="cal-date">26</div><div class="cal-event">好評分享</div></td>
+<td><div class="cal-date">27</div></td>
+</tr>
+<tr>
+<td><div class="cal-date">28</div></td>
+<td><div class="cal-date">29</div></td>
+<td><div class="cal-date">30</div><div class="cal-event">質感生活</div></td>
+<td><div class="cal-date cal-date-dim">1</div></td>
+<td><div class="cal-date cal-date-dim">2</div></td>
+<td><div class="cal-date cal-date-dim">3</div></td>
+<td><div class="cal-date cal-date-dim">4</div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<!-- ============ Slide 10: 品牌核心 ============ -->
+<div class="slide-wrapper"><div class="slide slide-inner">
+<div class="slide-left">
+<div class="slide-number">05</div>
+<div>
+<div class="left-title-zh">品牌核心</div>
+<div class="left-title-line"></div>
+<div class="left-subtitle">BRAND CORE</div>
+</div>
+</div>
+<div class="slide-right">
+<svg class="slide-corner-mark"><use href="#logo-sunburst"></use></svg>
+<div class="core-list">
+<div class="core-item">
+<div class="core-num">01</div>
+<div class="core-text-block">
+<div class="core-title">服務流程</div>
+<div class="core-desc">從進門的熱情接待、入座細心講解、過程中主動關照（毯子、衛生紙、飲水），到課後協助分析牙況並預約下次時段，全程展現細緻關懷。</div>
+</div>
+</div>
+<div class="core-item">
+<div class="core-num">02</div>
+<div class="core-text-block">
+<div class="core-title">淬齒的堅持</div>
+<div class="core-desc">獨立拉簾守護隱私、自研凝膠 + 牙醫師顧問背書 + SGS 認證、100% 一次性拋棄式耗材，三大堅持落實安心承諾。</div>
+</div>
+</div>
+<div class="core-item">
+<div class="core-num">03</div>
+<div class="core-text-block">
+<div class="core-title">環境舒適度</div>
+<div class="core-desc">每 2 小時巡檢洗手台與廁所整潔，上下班前後查看騎樓與電梯動線，從細節維持空間質感。</div>
+</div>
+</div>
+<div class="core-item">
+<div class="core-num">04</div>
+<div class="core-text-block">
+<div class="core-title">牙醫師配合</div>
+<div class="core-desc">推薦客人配合的牙醫診所，協助一併安排洗牙與美齒預約時間，建立完整的口腔保養雙軌服務。</div>
+</div>
+</div>
+<div class="core-item">
+<div class="core-num">05</div>
+<div class="core-text-block">
+<div class="core-title">凝膠 SGS 博士團隊</div>
+<div class="core-desc">針對亞洲人牙齒特性開發的溫和配方，由專業博士研究、SGS 檢驗、牙醫師顧問背書，安全性與品質雙重把關。</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- ============ Slide 11: 結尾頁 ============ -->
+<div class="slide-wrapper"><div class="slide ending-page">
+<div class="ending-content">
+<div class="ending-logo">
+<svg height="80" width="80"><use href="#logo-sunburst"></use></svg>
+</div>
+<div class="ending-quote">
+      以專業建立信任<br/>
+      以細節累積好感
+    </div>
+<div class="ending-line"></div>
+<div class="ending-en">Clearer Smiles, Calmer Days.</div>
+<div class="ending-thanks">THANK YOU</div>
+</div>
+</div></div>
+<script>
+(function() {
+  function scaleSlides() {
+    var wrappers = document.querySelectorAll('.slide-wrapper');
+    var viewportWidth = document.documentElement.clientWidth;
+    var maxWidth = Math.min(viewportWidth, 1280);
+    var scale = maxWidth / 1280;
+    
+    wrappers.forEach(function(wrapper) {
+      wrapper.style.width = maxWidth + 'px';
+      var slide = wrapper.querySelector('.slide');
+      if (slide) {
+        slide.style.transform = 'scale(' + scale + ')';
+      }
+    });
+  }
+  
+  scaleSlides();
+  window.addEventListener('resize', scaleSlides);
+  window.addEventListener('load', scaleSlides);
+})();
+</script></body>
+</html>
